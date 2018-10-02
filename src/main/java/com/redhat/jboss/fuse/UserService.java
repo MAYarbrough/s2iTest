@@ -55,7 +55,9 @@ public class UserService {
 				// ignore
 			}
 		}
-		return users.get(id);
+		User u = users.get(id);
+		u.setDescription("someDesc");
+		return u;
 	}
 
 	/**
