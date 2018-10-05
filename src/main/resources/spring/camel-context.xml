@@ -176,6 +176,8 @@
 			<from uri="ftp:10.0.0.244/Outgoing
                  ?username=Anonymous
                  &amp;password=somePw
+				 &amp;binary=true
+				 &amp;passiveMode=true
                  &amp;move=.done" />
 				 
 			<to uri="log:com.mycompany.order?level=INFO" />
@@ -183,6 +185,8 @@
 			<!-- finally push the new contents to a file in the destination -->
 			<to uri="ftp:10.0.0.244/Outgoing2
                  ?username=Anonymous
+				 &amp;binary=true
+				 &amp;passiveMode=true
                  &amp;password=somePw" />
 		</route>
     </camelContext>
