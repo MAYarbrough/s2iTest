@@ -173,7 +173,7 @@
 
 		<route>
 			<!-- define the location to pull the unencrypted files from, since we're now inside the camel-context we can use the camel properties placeholder with {{}} -->
-			<from uri="ftp:10.0.0.244/
+			<from uri="ftp:10.0.0.110/
                  ?username=Anonymous
                  &amp;password=somePw
                  &amp;move=.done" />
@@ -181,7 +181,7 @@
 			<to uri="log:com.mycompany.order?level=INFO" />
 			
 			<!-- finally push the new contents to a file in the destination -->
-			<to uri="ftp:10.0.0.244/Outgoing
+			<to uri="ftp:10.0.0.110/Outgoing
                  ?username=Anonymous
                  &amp;password=somePw" />
 		</route>
