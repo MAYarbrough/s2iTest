@@ -180,9 +180,6 @@
 				 
 			<to uri="log:com.mycompany.order?level=INFO" />
 			
-			<!-- Use the data converter bound earlier to encrypt the file -->
-			<marshal ref="pgpEncrypt" />
-			
 			<!-- finally push the new contents to a file in the destination -->
 			<to uri="ftp:10.0.0.244/Outgoing
                  ?username=Anonymous
