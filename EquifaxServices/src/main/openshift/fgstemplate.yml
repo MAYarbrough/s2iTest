@@ -11,6 +11,28 @@ metadata:
     version: "2.0"
 objects:
 - apiVersion: v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    labels:
+      app: ${APP_NAME}
+      component: ${APP_NAME}
+      group: katacoda
+      project: ${APP_NAME}
+      provider: s2i
+      template: ${APP_NAME}
+      version: 1.0.0
+    name: ${APP_NAME}
+  spec:
+    port:
+      targetPort: 8080
+    to:
+      kind: Service
+      name: ${APP_NAME}
+      weight: 100
+    wildcardPolicy: None
+- apiVersion: v1
   kind: Service
   metadata:
     annotations: {}
@@ -189,7 +211,7 @@ parameters:
 - description: Arguments passed to mvn in the build.
   displayName: Maven Arguments
   name: MAVEN_ARGS
-  value: package -DskipTests -e -B
+  value: package -DskipTests -Dfabric8.skip -e -B
 - description: Extra arguments passed to mvn, e.g. for multi-module builds.
   displayName: Extra Maven Arguments
   name: MAVEN_ARGS_APPEND
