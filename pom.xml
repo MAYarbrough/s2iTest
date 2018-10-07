@@ -62,6 +62,14 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- Fabric8 -->
+		<dependency>
+			<groupId>io.fabric8</groupId>
+			<artifactId>fabric8-project-bom-camel-spring-boot</artifactId>
+			<version>${fabric8.version}</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
 
       <!-- Camel -->
       <dependency>
@@ -161,11 +169,6 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-expression</artifactId>
-        <version>${spring-version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-actuator</artifactId>
         <version>${spring-version}</version>
       </dependency>
     </dependencies>
