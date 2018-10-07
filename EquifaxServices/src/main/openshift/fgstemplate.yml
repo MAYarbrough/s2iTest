@@ -3,12 +3,12 @@ kind: Template
 labels:
   template: fusegs
 metadata:
-  name: mypeopleservice-template
+  name: equifaxservices-template
   annotations:
-    description: Katacoda || FUSE || Getting started
+    description: EquifaxServices
     iconClass: icon-jenkins
     tags: demo,java,springboot,fis,jenkins
-    version: "2.0"
+    version: "1.0"
 objects:
 - apiVersion: v1
   kind: Route
@@ -186,7 +186,7 @@ parameters:
   displayName: Application Name
   name: APP_NAME
   required: true
-  value: mypeopleservice
+  value: equifaxservices
 - description: The URL of the repository with your application source code.
   displayName: Git Repository URL
   name: GIT_REPO
@@ -194,7 +194,7 @@ parameters:
   value: https://github.com/MAYarbrough/s2iTest.git
 - description: Path within Git project to build; empty for root project directory.
   name: CONTEXT_DIR
-  value: 
+  value: EquifaxServices
 - description: Set this to a branch name, tag or other ref of your repository if you
     are not using the default branch.
   displayName: Git Reference
