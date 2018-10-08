@@ -38,12 +38,14 @@ objects:
         env:
         - name: BUILD_LOGLEVEL
           value: "5"
-        - name: MAVEN_ARGS_APPEND
-          value: -pl EquifaxServices --also-make
         - name: ARTIFACT_DIR
-          value: EquifaxServices/target/
+          value: ${ARTIFACT_DIR}
         - name: MODULE_DIR
-          value: EquifaxServices
+          value: ${MODULE_DIR}
+        - name: MAVEN_ARGS
+          value: ${MAVEN_ARGS}
+        - name: MAVEN_ARGS_APPEND
+          value: ${MAVEN_ARGS_APPEND}
         forcePull: true
         from:
           kind: ImageStreamTag
@@ -152,7 +154,7 @@ parameters:
 - description: Arguments passed to mvn in the build.
   displayName: Maven Arguments
   name: MAVEN_ARGS
-  value: package
+  value: package -DskipTests -Dfabric8.skip -e -B
 - description: Extra arguments passed to mvn, e.g. for multi-module builds.
   displayName: Extra Maven Arguments
   name: MAVEN_ARGS_APPEND
