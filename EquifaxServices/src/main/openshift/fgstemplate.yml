@@ -38,14 +38,12 @@ objects:
         env:
         - name: BUILD_LOGLEVEL
           value: "5"
-        - name: ARTIFACT_DIR
-          value: ${ARTIFACT_DIR}
-        - name: MODULE_DIR
-          value: ${MODULE_DIR}
-        - name: MAVEN_ARGS
-          value: ${MAVEN_ARGS}
         - name: MAVEN_ARGS_APPEND
-          value: ${MAVEN_ARGS_APPEND}
+          value: -pl fis --also-make
+        - name: ARTIFACT_DIR
+          value: EquifaxServices/target/
+        - name: MODULE_DIR
+          value: EquifaxServices
         forcePull: true
         from:
           kind: ImageStreamTag
