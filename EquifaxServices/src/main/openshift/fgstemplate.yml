@@ -152,7 +152,7 @@ parameters:
 - description: Arguments passed to mvn in the build.
   displayName: Maven Arguments
   name: MAVEN_ARGS
-  value: package -DskipTests -Dfabric8.skip -e -B
+  value: package
 - description: Extra arguments passed to mvn, e.g. for multi-module builds.
   displayName: Extra Maven Arguments
   name: MAVEN_ARGS_APPEND
