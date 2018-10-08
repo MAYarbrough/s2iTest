@@ -39,7 +39,7 @@ objects:
         - name: BUILD_LOGLEVEL
           value: "5"
         - name: MAVEN_ARGS_APPEND
-          value: -pl fis --also-make
+          value: -pl EquifaxServices --also-make
         - name: ARTIFACT_DIR
           value: EquifaxServices/target/
         - name: MODULE_DIR
